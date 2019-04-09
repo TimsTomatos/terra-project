@@ -11,7 +11,7 @@ const signUpValuePW = document.querySelector('#signup-password');
 const signInForm = document.querySelector('#form-login');
 const signUpForm = document.querySelector('#form-signup');
 
-const head = document.querySelector('#form');
+const head = document.querySelector('#main');
 const logout_button = document.querySelector('#logout-button');
 
 //const signInStuff = document.querySelectorAll('.signInStuff');
