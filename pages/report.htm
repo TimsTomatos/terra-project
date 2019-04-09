@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/styles/report.css">
+    <link rel="stylesheet" href="../styles/report.css">
     <title>Terra Project</title>
 </head>
 <body>
@@ -86,7 +86,8 @@
 
 
         <form action="">
-            <input type="file" id="upload-image">
+            <input type="file" id="upload-image" autocomplete="off">
+            <input type="text" placeholder="type of litter" id="type-t">
             <input type="text" id="comment" placeholder="comments">
         </form>
         
@@ -109,7 +110,10 @@
   firebase.initializeApp(config);
   const auth = firebase.auth();
   const db = firebase.firestore();
+  const storage = firebase.storage();
 </script>
-<script src="/apps/report.js"></script>
-<script src="/apps/auth2.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script src="../apps/report.js"></script>
+<script src="../apps/auth2.js"></script>
 </html>

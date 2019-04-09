@@ -52,6 +52,8 @@ head.addEventListener('submit', (e) => {
 
     auth.signInWithEmailAndPassword(email,password).then(() => {
         //inPop.style.display = 'none';
+        location.reload();
+        
     });
 });
 

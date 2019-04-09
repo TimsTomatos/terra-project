@@ -324,7 +324,57 @@
 	transform: translateX(30%);
 }
 
+/* main map stuff */
 
+.cardContainer {
+	display: inline-flex;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background: rgba(0,0,0,0.3);
+	justify-content: center;
+	top: 0%;
+	overflow: scroll;
+}
 
+.card {
+	display: inline-flex;
+	background: white;
+	width: 25rem;
+	height: 30rem;
+	flex-direction: column;
+	margin: auto;
+	border-radius: 1rem;
+	overflow: hidden;
+}
 
+.card > img {
+	height: 50%;
+}
 
+.type {
+	text-align: center;
+	padding: 1rem;
+	background-color: gray;
+	margin: 0;
+}
+
+.comment {
+	text-align: center;
+}
+
+.close  {
+	height: 10%;
+	width: 10%;
+	position: absolute;
+	left: 72%;
+	font-size: 1.5rem;
+	top: 13%;
+	background: transparent;
+	border: transparent;
+	color: red;
+}
+
+.user {
+	text-align: center;
+}

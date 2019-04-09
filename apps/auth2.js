@@ -32,6 +32,7 @@ auth.onAuthStateChanged(function(user) { // Checks if they are signed in or sign
     {
         console.log("Logged in");
         console.log(user);
+
         //signInStuff.forEach(e => e.style.display="block");
         //signOutStuff.forEach(e => e.style.display="none");
         display_user.innerHTML = user.email;

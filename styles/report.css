@@ -66,6 +66,10 @@ body {
     bottom: 500%;
     display: none;
 }
+#type-t {
+    position: relative;
+    right: 12%;
+}
 
 
 *,

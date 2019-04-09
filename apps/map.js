@@ -33,6 +33,7 @@ db.collection('pins').onSnapshot(data => {
           DisplayFromPin(element.litterType,element.comment,url,element.user)
           map.setCenter(marker.getPosition());
           console.log(element);
+
         });
       });
 
@@ -87,7 +88,22 @@ function Close() {
 }
 
 
+function oof() {
+  let tempCard = document.createElement("DIV");
+    tempCard.className = "cardContainer"
+    tempCard.innerHTML = `
+        <button class="close" onclick="Close()">X</button> 
+        <div class="card">
+            <h1 class="type">${type}</h1>
+            <p class="comment">${comment}</p>
+        </div>
+    `
+    document.querySelector('#main').appendChild(tempCard);
+}
 
+function Close() {
+  document.getElementsByClassName("cardContainer")[0].remove();
+}
 
 
 
@@ -111,7 +127,7 @@ switchers.forEach(item => {
 	item.addEventListener('click', function() {
 		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
         this.parentElement.classList.add('is-active')
-        console.log("oof")
+        console.log("oof");
 	})
 })
 
