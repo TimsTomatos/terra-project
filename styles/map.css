@@ -340,8 +340,8 @@
 .card {
 	display: inline-flex;
 	background: white;
-	width: 25rem;
-	height: 30rem;
+	width: 50rem;
+	height: 50rem;
 	flex-direction: column;
 	margin: auto;
 	border-radius: 1rem;
@@ -349,7 +349,7 @@
 }
 
 .card > img {
-	height: 50%;
+	height: 70%;
 }
 
 .type {
