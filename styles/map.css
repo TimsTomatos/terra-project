@@ -4,6 +4,11 @@
     overflow: hidden;
 }
 
+
+#pop {
+	z-index: 99;
+}
+
 .nav-content {
     position: absolute;
     z-index: 3;
@@ -345,7 +350,7 @@
 	flex-direction: column;
 	margin: auto;
 	border-radius: 1rem;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 .card > img {

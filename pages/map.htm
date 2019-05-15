@@ -6,14 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Terra Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="../styles/map.css">
 </head>
 <body>
 
 
 
+
+  
+
     <div id="main">
-    <!--    <div  id="nav-bar" class="nav-content"></div>
+
+        
+
+      <div  id="nav-bar" class="nav-content"></div>
         <header class="basic nav-content" id="render-bar">
                 <nav class="transparent">
                     <a href="../pages/home.htm">
@@ -29,14 +37,25 @@
                     </div>
                 </nav>
         </header>
-      -->
-        <div id="map"></div>
+    
+        <div id="map">
+            <div id="pop">
+            <ul id="slide-out" class="sidenav">
+                <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                <li><a href="#!">Second Link</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Subheader</a></li>
+                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </div>
     </div>
 
 
-<!--
-        
 
+        
+      <!--
         <span class="close">&times;</span>
         <section class="forms-section">
             <div class="forms">
@@ -91,9 +110,12 @@
         
     </div>
   
-  -->
-    
 
+  -->
+
+
+
+    
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script>
     // Initialize Firebase

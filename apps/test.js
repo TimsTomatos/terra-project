@@ -1,10 +1,18 @@
+// document.addEventListener('click', function() {
+//     var elems = document.querySelectorAll('.sidenav');
+//     var instances = M.Sidenav.init(elems, {});
+//   });
+
+
+
 var storageReference = storage.ref();
 var render_bar = document.querySelector('#render-bar')
 var render_address;
 
 
-//
-var stuff = document.querySelectorAll('img');
+
+
+
 function initMap() { //initation
     map = new google.maps.Map(document.querySelector('#map'), { // where the map is located in HMTL
       center: {lat:21.4389, lng:-158.0001}, //where it will be defaulted too
@@ -22,6 +30,9 @@ db.collection('pins').onSnapshot(data => {
       pins.push(doc.data());
   });
 
+
+
+  
   pins.forEach((element, index) => { // Like Enuemrate, with index being int
 
       var uploadedImage = storageReference.child(element.image);
@@ -31,16 +42,14 @@ db.collection('pins').onSnapshot(data => {
         map: map,
         title: element.commetn
       });
-
       // This stuff 
       marker.addListener('click', function() {
         uploadedImage.getDownloadURL().then(url => {
-          // var elems = document.querySelectorAll('.sidenav');
-          // var instances = M.Sidenav.init(elems, {});
-          // console.log("GY")  
-          DisplayFromPin(element.litterType,element.comment,url,element.user)
-          map.setCenter(marker.getPosition());
-          console.log(element);
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems, {});
+          // DisplayFromPin(element.litterType,element.comment,url,element.user)
+          // map.setCenter(marker.getPosition());
+          // console.log(element);
         });
       });
 
@@ -57,13 +66,7 @@ db.collection('pins').onSnapshot(data => {
                 console.log(results[1].formatted_address)
                 address = results[1].formatted_address
             }
-        }
-        // Renders Data to Side Bar
-        render_address = address;
-        render_bar.innerHTML += `
-        <p class="content"> ${address} </p> 
-        `;
-        // ${superHold[index].lati}, ${superHold[index].long}  ${element.littertype}: ${element.comment}
+        }      
     });
 
   });
@@ -75,6 +78,8 @@ db.collection('pins').onSnapshot(data => {
 
 });
 
+
+
 function DisplayFromPin(type,comment,image,user,address) {
   let tempCard = document.createElement("DIV");
   tempCard.className = "cardContainer"
@@ -84,6 +89,7 @@ function DisplayFromPin(type,comment,image,user,address) {
           <h1 class="type">${type}</h1>
           <img class="image" src="${image}" />
           <p class="user">${user}</p>
+          <p class="user"> ${render_address}</p>
           <p class="comment">${comment}</p>
           
       </div>
@@ -110,19 +116,10 @@ function oof() {
     document.querySelector('#main').appendChild(tempCard);
 }
 
-function Close() {
-  document.getElementsByClassName("cardContainer")[0].remove();
-}
 
 
 
 
-
-/// Login Stuff
-// Login Modal
-var login_box = document.querySelector("#login-box");
-var login_buton = document.querySelector("#login-button");
-var close_button = document.querySelector(".close");
 
 
 
@@ -145,23 +142,7 @@ switchers.forEach(item => {
 
 
 
-login_buton.onclick = function () 
-{
-    login_box.style.display = "block";
-}
 
-close_button.onclick = function () 
-{
-    login_box.style.display = "none";
-}
-
-window.onclick = function(event)                         // If user clicks any where else modal closes
-{
-    if (event.target == login_box)
-    {
-        login_box.style.display = 'none';
-    }
-}
 
 
 

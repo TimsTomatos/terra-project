@@ -1,0 +1,18 @@
+#three-box-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.three-box {
+    width: 400px;
+    height: 300px;
+    color: maroon;
+}
+
+
+.header-text {
+    text-decoration-color: white;
+}
+

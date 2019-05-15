@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/map.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Project Terra</title>
+</head>
+<body>
+
+  
+
+
+  <div id="main">
+    <div id="map"></div>
+    <ul id="slide-out" class="sidenav">
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  </div>
+
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAMbrdiuW5Faw-0eZ8RE5SkhcWrE6L0Y_g",
+        authDomain: "angular-vortex-217203.firebaseapp.com",
+        databaseURL: "https://angular-vortex-217203.firebaseio.com",
+        projectId: "angular-vortex-217203",
+        storageBucket: "angular-vortex-217203.appspot.com",
+        messagingSenderId: "289057629669"
+    };
+    firebase.initializeApp(config);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const storage = firebase.storage();
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/apps/test.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmgs0P16x06Y1uvvjbFBTM_X58eCEyAcE&callback=initMap&libraries=visualization" async defer></script>
+</html>
