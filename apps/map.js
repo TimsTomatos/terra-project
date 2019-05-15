@@ -3,11 +3,19 @@ var render_bar = document.querySelector('#render-bar')
 var render_address;
 
 
-//
+var main_lati;
+var main_long;
+navigator.geolocation.getCurrentPosition(function(location) {
+  main_lati = location.coords.latitude;
+  main_long = location.coords.longitude;
+});
+
+
 var stuff = document.querySelectorAll('img');
 function initMap() { //initation
     map = new google.maps.Map(document.querySelector('#map'), { // where the map is located in HMTL
-      center: {lat:21.4389, lng:-158.0001}, //where it will be defaulted too
+      //center: {lat:21.4389, lng:-158.0001}, //where it will be defaulted too
+      center: {lat:main_lati, lng: main_long},
       zoom: 5, //zoom of how close it is
       mapTypeId: 'satellite'
     });
