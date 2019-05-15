@@ -2,7 +2,7 @@ var storageReference = storage.ref();
 var render_bar = document.querySelector('#render-bar')
 var render_address;
 
-
+// Defaults to Current Location
 var main_lati;
 var main_long;
 navigator.geolocation.getCurrentPosition(function(location) {
@@ -10,6 +10,8 @@ navigator.geolocation.getCurrentPosition(function(location) {
   main_long = location.coords.longitude;
 });
 
+console.log("lati + main_lati")
+console.log("long + main_long")
 
 var stuff = document.querySelectorAll('img');
 function initMap() { //initation
@@ -36,6 +38,7 @@ db.collection('pins').onSnapshot(data => {
 
       var marker = new google.maps.Marker({
         position: {lat:parseFloat(element.lati),lng:parseFloat(element.long)},
+        //position: {lat:parseFloat(main_lati), lng:parseFloat(main_long)},
         map: map,
         title: element.commetn
       });

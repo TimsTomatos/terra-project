@@ -32,8 +32,10 @@ sub.addEventListener('click',() => {
 })
 
 function setCoords(position) {
-    long = position.coords.longitude;
-    lati = position.coords.latitude;
+    //long = position.coords.longitude;
+    lati = 33.448669;
+    long = -112.069901;
+    //lati = position.coords.latitude;
     console.log(long);
     console.log(lati);
 }
